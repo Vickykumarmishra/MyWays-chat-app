@@ -5,6 +5,7 @@ export default function TaskBoard() {
 
     const [todo,setTodo]=useState([])//all tasks will be stored inside this array and using map we will traverse through each task and display it.
     const [inputvalue,setInputvalue]=useState('')
+    const [done,setDone]=useState([]);
     function addtodo(){
            //agar input field m kuch v nahi likhe and fir v add button par clcik kar diye to usko handle karne k liye below code hai
            if(inputvalue==='') return;
@@ -16,6 +17,8 @@ export default function TaskBoard() {
 
     function removetodo(index){
          const updatedTodo=todo.filter((item,i)=>{
+          let donevalue=todo[i];
+        setDone([...done,donevalue])
              return i!==index;
          })
          setTodo(updatedTodo)
@@ -48,6 +51,24 @@ export default function TaskBoard() {
 
         </div></center>
         <br></br>
+
+        <center><div style={{backgroundColor:'white',color:"black",height:'10rem',width:"40%"}}>
+          <div style={{height:"2rem",backgroundColor:'red',color:"white"}}><h5>Done</h5></div>
+
+          <ol>
+      {
+        done.map((elem,index)=>(
+
+          <li>{elem}
+          
+          {/*while passing argument to the function don't do it directly with onclick, do it inside arrow function, otherwise it will not work */}
+          </li>
+          
+       ) )
+      }
+      </ol>
+
+        </div></center><br></br>
      <center><Link to='/chat'><button className="btn btn-primary">Go To Chat Room</button></Link></center> 
     </div>
   )
