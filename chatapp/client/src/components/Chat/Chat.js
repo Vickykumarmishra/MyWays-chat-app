@@ -85,7 +85,7 @@ The socket.off() method is used to remove all event listeners from the socket wh
   function loader(){
 
     Swal.fire({
-      title: '......Loading',
+      title: '...connecting to server',
       html: 'I will close in <b></b> milliseconds.',
       timer: 100000,
       timerProgressBar: true,
