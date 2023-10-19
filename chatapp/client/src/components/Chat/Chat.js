@@ -105,6 +105,7 @@ The socket.off() method is used to remove all event listeners from the socket wh
     
     <div className='container-fluid' id='chatpage' style={{height:'35rem',width:"100%"}} onLoad={loader}><br></br><br></br>
        <center>  <h5 style={{color:'white',backgroundColor:"green"}}>wait or refresh the page after few seconds; until welcome message pops up....</h5></center>
+       <center><b><p style={{color:'red'}}>[instructions:- All users must be online to chat with each other]</p></b></center>
       <center> <diV className='container-fluid' id='chatbox' style={{backgroundColor:'green',height:'25rem',width:'70%',borderRadius:'1rem'}}>
         <div className='container-fluid' id='header' style={{backgroundColor:'red',height:'2rem'}}></div>
 
